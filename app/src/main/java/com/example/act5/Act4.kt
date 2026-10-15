@@ -124,7 +124,6 @@ fun FormatDataDiri(modifier: Modifier, ext: (Any?) -> Unit) {
                 Text(text = "Gender : "+jenis.value, color = Color.White)
                 Text(text = "Alamat : "+alamat.value, color = Color.White)
             }
-
         }
     }
 }
