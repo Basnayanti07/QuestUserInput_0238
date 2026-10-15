@@ -20,10 +20,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun FormatDataDiri(modifier: Modifier) {
+fun FormatDataDiri(modifier: Modifier, ext: (Any?) -> Unit) {
     //variabel-variabel untuk mengingat nilai masukan dari keyboard
     var textNama = remember { mutableStateOf(value = "") }
     var textAlamat = remember { mutableStateOf(value = "") }
@@ -94,6 +95,8 @@ fun FormatDataDiri(modifier: Modifier) {
                 jenis.value = textJK.value
                 alamat.value = textAlamat.value
             }
-        ) {}
+        ) {
+            ext(stringResource(R.string.submit))
+        }
     }
 }
